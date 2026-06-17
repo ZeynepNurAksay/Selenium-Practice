@@ -1,9 +1,9 @@
-package com.demoqa.pages.alerts;
+package com.demoqa.pages.alerts_frames_windows;
 
 import com.utilities.JavaScriptUtility;
 import org.openqa.selenium.By;
 
-public class ModalDialogsPage extends AlertsPage{
+public class ModalDialogsPage extends Alerts_Frames_WindowsPage {
 
     private By smallButton = By.id("showSmallModal");
     private By smallModel = By.xpath("//div[contains(text(), 'small modal')]");

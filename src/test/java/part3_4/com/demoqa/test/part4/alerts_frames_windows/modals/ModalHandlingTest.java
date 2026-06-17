@@ -1,4 +1,4 @@
-package part3_4.com.demoqa.test.part4.alerts;
+package part3_4.com.demoqa.test.part4.alerts_frames_windows.modals;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

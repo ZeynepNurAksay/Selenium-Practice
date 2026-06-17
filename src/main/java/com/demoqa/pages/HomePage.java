@@ -1,6 +1,6 @@
 package com.demoqa.pages;
 
-import com.demoqa.pages.alerts.AlertsPage;
+import com.demoqa.pages.alerts_frames_windows.Alerts_Frames_WindowsPage;
 import com.demoqa.pages.elements.ElementsPage;
 import com.demoqa.pages.forms.FormsPage;
 import com.BasePage;
@@ -33,10 +33,10 @@ public class HomePage extends BasePage {
         return new WidgetsPage();
     }
 
-    public AlertsPage goToAlerts() {
+    public Alerts_Frames_WindowsPage goToAlerts() {
         scrollToElementJS(alertsCard);
         clickJs(alertsCard);
-        return new AlertsPage();
+        return new Alerts_Frames_WindowsPage();
     }
 
 }
