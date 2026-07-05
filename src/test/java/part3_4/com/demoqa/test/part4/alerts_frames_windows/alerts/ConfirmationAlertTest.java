@@ -13,7 +13,7 @@ public class ConfirmationAlertTest extends BaseTest {
         var alertsPage = homePage.goToAlerts().clickAlertsMenuItem();
         alertsPage.clickConfirmAlertButton();
         SwitchToUtility.rejectAlert();
-        String actualText = alertsPage.getResultText();
+        String actualText = alertsPage.getConfirmResultText();
         Assert.assertTrue(actualText.contains("Cancel"));
     }
 

@@ -8,6 +8,8 @@ public class AlertsPage extends Alerts_Frames_WindowsPage{
     private By alertButton = By.id("alertButton");
     private By confirmAlertButton = By.id("confirmButton");
     private By confirmResult = By.id("confirmResult");
+    private By promptAlertButton = By.id("promtButton");
+    private By promptResult = By.id("promptResult");
 
     public void clickAlertButton() {
         JavaScriptUtility.scrollToElementJS(alertButton);
@@ -19,8 +21,17 @@ public class AlertsPage extends Alerts_Frames_WindowsPage{
         JavaScriptUtility.clickJs(confirmAlertButton);
     }
 
-    public String getResultText() {
+    public String getConfirmResultText() {
         return find(confirmResult).getText();
+    }
+
+    public void clickPromptAlertButton(){
+        JavaScriptUtility.scrollToElementJS(promptAlertButton);
+        JavaScriptUtility.clickJs(promptAlertButton);
+    }
+
+    public String getPromptResultText() {
+        return find(promptResult).getText();
     }
 
 }
