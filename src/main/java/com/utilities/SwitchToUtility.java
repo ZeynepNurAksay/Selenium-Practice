@@ -1,5 +1,6 @@
 package com.utilities;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class SwitchToUtility extends Utility{
@@ -22,6 +23,18 @@ public class SwitchToUtility extends Utility{
 
     public static void enterIntoAlert(String name) {
         switchTo().alert().sendKeys(name);
+    }
+
+    public static void switchToFrame(String iFrameId) {
+        driver.switchTo().frame(iFrameId);
+    }
+
+    public static void switchToDefaultContent() {
+        driver.switchTo().defaultContent();
+    }
+
+    public static void switchToFrame(int id) {
+        driver.switchTo().frame(id);
     }
 
 }
