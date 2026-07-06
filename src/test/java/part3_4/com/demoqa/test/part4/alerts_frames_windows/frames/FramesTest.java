@@ -25,4 +25,13 @@ public class FramesTest extends BaseTest {
         Assert.assertEquals(title, "Frames");
     }
 
+    public void testFramesSmallBoxByXPath() {
+        var framesPage = homePage.goToAlerts().clickFramesMenuItem();
+        String actualText = framesPage.getTextInSmallFrameByXPath();
+        String expectedText = "This is a sample page";
+        Assert.assertEquals(actualText, expectedText);
+        String title = framesPage.getTitle();
+        Assert.assertEquals(title, "Frames");
+    }
+
 }
