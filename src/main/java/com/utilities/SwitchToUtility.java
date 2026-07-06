@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.Set;
+
 public class SwitchToUtility extends Utility{
 
     private static WebDriver.TargetLocator switchTo() {
@@ -42,4 +44,17 @@ public class SwitchToUtility extends Utility{
         driver.switchTo().frame(element);
     }
 
+    public static void switchToNewWindow(){
+        String currentHandle = driver.getWindowHandle();
+        Set<String> allHandles = driver.getWindowHandles();
+
+        for(String handle: allHandles){
+            if(currentHandle.equals(handle)){
+                continue;
+            }
+            else {
+                driver.switchTo().window(handle);
+            }
+        }
+    }
 }
