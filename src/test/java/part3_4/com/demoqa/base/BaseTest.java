@@ -16,6 +16,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 public class BaseTest {
 
@@ -28,6 +29,9 @@ public class BaseTest {
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//        driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(5));
+//        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
     }
 
     @BeforeMethod
