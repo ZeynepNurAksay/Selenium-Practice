@@ -14,4 +14,11 @@ public class DynamicWaitTests extends BaseTest {
         Assert.assertEquals(actualText, "Visible After 5 Seconds");
     }
 
+    public void testProgressBar() {
+        var progressBarPage = homePage.goToWidgets().clickProgressBarMenuItem();
+        progressBarPage.clickStartStopButton();
+        String actualValue = progressBarPage.getProgressValue();
+        Assert.assertEquals(actualValue, "100%");
+    }
+
 }
